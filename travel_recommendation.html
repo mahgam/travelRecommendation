@@ -33,7 +33,7 @@
         margin: 0 !important;
       }
       h1 {
-        font-size: 60px;
+        font-size: 50px;
       }
       .btn {
         color: #20c997;
@@ -56,7 +56,7 @@
           class="navbar navbar-expand-lg navbar-light"
           style="background-color: #bce1ff"
         >
-          <a class="navbar-brand" href="./index.html">
+          <a class="navbar-brand" href="./travel_recommendation.html">
             <img
               src="./airplane.png"
               width="30"
@@ -70,7 +70,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="./index.html"
+                <a class="nav-link" href="./travel_recommendation.html"
                   >Home <span class="sr-only"></span
                 ></a>
               </li>
@@ -92,15 +92,28 @@
                   <input
                     class="form-control mr-sm-3"
                     type="search"
-                    placeholder="Enter yout destination here!"
+                    placeholder="Temple? Country? Beaches? City?"
                     aria-label="Search"
+                    id="searchInput"
                   />
                 </div>
                 <div class="col-auto">
-                  <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                  <button
+                    class="btn my-2 my-sm-0"
+                    type="search"
+                    id="searchButton"
+                  >
+                    Search
+                  </button>
                 </div>
                 <div class="col-auto">
-                  <button class="btn my-2 my-sm-0" type="submit">Clear</button>
+                  <button
+                    class="btn my-2 my-sm-0"
+                    type="reset"
+                    id="clearButton"
+                  >
+                    Clear
+                  </button>
                 </div>
               </div>
             </form>
@@ -108,22 +121,9 @@
         </nav>
 
         <main>
-          <div class="container p-5 text-white">
+          <div class="container p-5">
             <div class="row">
-              <div class="col-sm-4">
-                <h1>EXPLORE DREAM DESTINATION</h1>
-                <p>
-                  Never stop exploring!Never stop exploring!Never stop
-                  exploring!Never stop exploring!
-                </p>
-                <button class="btn text-white my-2 my-sm-0" type="submit">
-                  Book Now!
-                </button>
-              </div>
-              <div class="col-sm-8"></div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 p-3">
+              <div class="col-sm-6">
                 <!-- Facebook -->
                 <a href="#"
                   ><i
@@ -150,6 +150,24 @@
               </div>
             </div>
           </div>
+          <div class="container p-5 text-white">
+            <div class="row">
+              <div class="col-sm-4">
+                <h1>EXPLORE DREAM DESTINATION</h1>
+                <p>
+                  Never stop exploring!Never stop exploring!Never stop
+                  exploring!Never stop exploring!
+                </p>
+                <button class="btn text-white my-2 my-sm-0" type="submit">
+                  Book Now!
+                </button>
+              </div>
+
+              <div class="col-sm-8 p-3">
+                <div id="recResult"></div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
@@ -158,5 +176,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="travel_recommendation.js"></script>
   </body>
 </html>
